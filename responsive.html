@@ -1,13 +1,95 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title></title>
-    </head>
-    <body>
-        <div class="container">
-            <div class="box1">box1</div>
-            <div class="box2">box2</div>
-            <div class="box3">box3</div>
-        </div>
-    </body>
+
+<head>
+    <title></title>
+    <style type="text/css">
+        .container {
+            width: 300px;
+            height: 300px;
+            display: flex;
+        }
+
+        @media screen and (min-width: 400px) {
+            .container {
+                background-color: green;
+            }
+
+            .box1 {
+                width: 25%;
+                height: 40px;
+                background-color: purple;
+            }
+
+            .box2 {
+                width: 25%;
+                height: 40px;
+                background-color: green;
+            }
+
+            .box3 {
+                width: 25%;
+                height: 40px;
+                background-color: aquamarine;
+            }
+        }
+
+        @media screen and (min-width: 600px) {
+            .container {
+                background-color: blue;
+            }
+
+            .box1 {
+                width: 15%;
+                height: 40px;
+                background-color: red;
+            }
+
+            .box2 {
+                width: 35%;
+                height: 40px;
+                background-color: green;
+            }
+
+            .box3 {
+                width: 35%;
+                height: 40px;
+                background-color: aquamarine;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+            .container {
+                background-color: purple;
+            }
+
+            .box1 {
+                width: 10%;
+                height: 40px;
+                background-color: red;
+            }
+
+            .box2 {
+                width: 40%;
+                height: 40px;
+                background-color: green;
+            }
+
+            .box3 {
+                width: 40%;
+                height: 40px;
+                background-color: aquamarine;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
+</body>
+
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h2>promise javascript</h2>
+    <script type="text/javascript">
+        function ambil(img) {
+            
+            let p = new Promise(
+                function (resolve, reject) {
+                    img.onload = function () {
+                        resolve(img);
+                    };
+                    img.onerror = function (e) {
+                        reject(e);
+                    }
+                }
+            );
+            return p;
+        }
+        
+        //---------------------------------
+        function sukses(img) {
+            document.body.appendChild(img);
+            alert('sukses');
+        }
+        function gagal(e) {
+            alert('gagal' + e);
+        }
+        
+        //---------menggunakan promise
+        let url = 'https://blogmedia.evbstatic.com/wp-content/uploads/engineering/2016/05/19140352/Promise-768x384.jpg';
+        let img = new Image();
+        img.src = url;
+        //contoh penggunaan promise, fungsi sukses akan menjadi resolve dan gagal akan menjadi reject
+        ambil(img).then(sukses).catch(gagal);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JS Dinamis</title>
+</head>
+
+<body>
+    <h2 id="teks">Welcome</h2>
+    <button id="btn1">Click</button>
+    <button id="btn2">Translate</button>
+    <script>
+    
+        //$('#btn1').click(function(){
+        //    
+        //})
+        document.querySelector("#btn1").addEventListener("click", () => {
+            alert('helo dari query selector');
+        });
+        document.getElementById("btn2").addEventListener("click", function () {
+            document.getElementById("teks").innerHTML = "Selamat Datang"
+        });
+    </script>
+</body>
+
+</html>

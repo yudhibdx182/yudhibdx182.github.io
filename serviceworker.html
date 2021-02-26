@@ -9,22 +9,7 @@
 <body>
     <h2>Service Worker</h2>
     <h3 id="sw"></h3>
-    <script type="text/javascript">
-        if (!('serviceWorker' in navigator)) {
-            // alert('browser tidak support service worker');
-            console.log('browser tidak support serviceWorker');
-            document.querySelector("#sw").innerHTML = 'tdak support';
-        } else {
-            //install
-            navigator.serviceWorker.register('/sw.js').then((reg) => {
-                console.log('serviceWorker berhasil didaftarkan');
-                document.querySelector("#sw").innerHTML = 'berhasil';
-            }).catch((err) => {
-                console.log('service worker gagal didaftarkan');
-                document.querySelector("#sw").innerHTML = 'gagal';
-            });
-        }
-    </script>
+    
 </body>
 
 </html>
